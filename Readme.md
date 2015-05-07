@@ -5,6 +5,28 @@ Cross-platform CLI GIF maker based on JS+Web.
 
 ![](https://cldup.com/Iu3VmK9SVy.gif)
 
+## Getting started
+
+On OS X, install latest Xcode command line tools, even if you think you already have them:
+
+```
+xcode-select --install
+```
+
+Then, go through the Apple dialogue to download and install them.
+
+<!-- Next, use the latest version of `child_pty`, not the specific commit that clif has tagged. -->
+
+If `Make` doesn’t work, run each file in `lib/` through 6to5:
+
+```sh
+./node_modules/.bin/6to5 lib/phantom.js > node/phantom.js
+./node_modules/.bin/6to5 lib/phantom-page.js > node/phantom-page.js
+# etc
+```
+
+<!-- This could be moved to an npm run script, it’s what the Makefile is supposed to be doing. -->
+
 ## How to use
 
 Run
