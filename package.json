@@ -1,9 +1,10 @@
 {
-  "name": "clif",
+  "name": "surge-clif",
   "version": "0.0.1",
   "description": "",
   "dependencies": {
     "6to5": "3.5.3",
+    "babel": "^5.2.15",
     "browserify-middleware": "4.1.0",
     "child_pty": "Gottox/child_pty",
     "clone": "1.0.0",
@@ -15,7 +16,7 @@
     "phantomjs": "1.9.15",
     "pngjs": "0.4.0",
     "queue3": "1.0.3",
-    "surge": "^0.11.1",
+    "surge": "latest",
     "term.js": "0.0.4",
     "uid2": "0.0.3",
     "ws": "0.7.2"
@@ -23,5 +24,9 @@
   "bin": {
     "clif": "./bin/clif"
   },
-  "main": "./node/index"
+  "main": "./node/index",
+  "scripts": {
+    "postinstall": "node_modules/.bin/6to5 lib/client.js > node/client.js && node_modules/.bin/6to5 lib/index.js > node/index.js && node_modules/.bin/6to5 lib/neuquant.js > node/neuquant.js && node_modules/.bin/6to5 lib/phantom-page.js > node/phantom-page.js && node_modules/.bin/6to5 lib/phantom.js > node/phantom.js && node_modules/.bin/6to5 lib/process-frame.js > node/process-frame.js && node_modules/.bin/6to5 lib/process.js > node/process.js && node_modules/.bin/6to5 lib/to-worker.js > node/to-worker.js && node_modules/.bin/6to5 lib/worker.js > node/worker.js",
+    "compile": "npm run postinstall"
+  }
 }
