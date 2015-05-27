@@ -26,7 +26,7 @@
   },
   "main": "./node/index",
   "scripts": {
-    "postinstall": "node_modules/.bin/6to5 lib/client.js > node/client.js && node_modules/.bin/6to5 lib/index.js > node/index.js && node_modules/.bin/6to5 lib/neuquant.js > node/neuquant.js && node_modules/.bin/6to5 lib/phantom-page.js > node/phantom-page.js && node_modules/.bin/6to5 lib/phantom.js > node/phantom.js && node_modules/.bin/6to5 lib/process-frame.js > node/process-frame.js && node_modules/.bin/6to5 lib/process.js > node/process.js && node_modules/.bin/6to5 lib/to-worker.js > node/to-worker.js && node_modules/.bin/6to5 lib/worker.js > node/worker.js",
+    "postinstall": "mkdir node && node_modules/.bin/6to5 lib/client.js > node/client.js && node_modules/.bin/6to5 lib/index.js > node/index.js && node_modules/.bin/6to5 lib/neuquant.js > node/neuquant.js && node_modules/.bin/6to5 lib/phantom-page.js > node/phantom-page.js && node_modules/.bin/6to5 lib/phantom.js > node/phantom.js && node_modules/.bin/6to5 lib/process-frame.js > node/process-frame.js && node_modules/.bin/6to5 lib/process.js > node/process.js && node_modules/.bin/6to5 lib/to-worker.js > node/to-worker.js && node_modules/.bin/6to5 lib/worker.js > node/worker.js",
     "compile": "npm run postinstall"
   }
 }
