@@ -12,14 +12,32 @@ On OS X, install latest Xcode command line tools, even if you think you already 
 xcode-select --install
 ```
 
-Then, go through the Apple dialogue to download and install them.
+Then, go through the Apple dialogue to download and install them. Now, you’re ready to install Surge’s version of clif with:
+
+```sh
+npm install -g @surge/clif
+```
+
+Note, you’ll need to be running npm@2.0.0 or greater to do this. You can check what version you’re using with:
+
+```sh
+npm --version
+```
+
+…and upgrade with:
+
+```sh
+sudo npm install -g npm
+```
+
+You can omit `sudo` if you are using Windows.
 
 ## How to use
 
 Run
 
-```bash
-$ clif out.gif
+```sh
+clif out.gif
 ```
 
 type `exit` to finish and save the recording.
